@@ -3,9 +3,9 @@ server:
 
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/wms_schema
-    username: wms_admin
-    password: wms_oauth
+    url: jdbc:mysql://localhost:3306/dws_schema
+    username: dws_admin
+    password: admin_dws
     driver-class-name: com.mysql.jdbc.Driver
     tomcat:
       test-while-idle: true
