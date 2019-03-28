@@ -1,0 +1,34 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/dws_schema
+    username: dws_admin
+    password: admin_dws
+    driver-class-name: com.mysql.jdbc.Driver
+    tomcat:
+      test-while-idle: true
+      validation-query: select 1
+    initialization-mode: never
+    platform: mysql
+    
+  jpa:
+    hibernate:
+      ddl-auto: update  
+
+security:
+  oauth2:
+    resource:
+      jwt:
+        key-value: |
+          -----BEGIN PUBLIC KEY-----
+          MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhXI9+R37m2tXQkGDu4oE
+          e8qKBJLLN0D1yVW+31D73d4HoUU/DgAMtbMVZ+Jj8nMZiVyOxT9ZCOndG7PF5H+F
+          pyhAxQR5cdizl4rP97WaIxteCMeG+HUpHh/A2QuiKIzTnFpvvQb6HoVzTMBKEw7v
+          dM1Mm859mGTetEDcrc2EscOu/BabT+6I3HUMi8iCnu1p0+DUcmrIr2iizMcJrGHW
+          jeKRGhh5cd0JneLJNs71IiLoHYlyNSi8gU0WrAVU71qP6yF3+E3OSfwXZZgrIOao
+          jVHiI7I8vFY0Xi+A7w7a2yR7PN40vQV3BHozgG2fGH9Q2nBJfn1SsMsaMv6FAkYs
+          dQIDAQAB
+          -----END PUBLIC KEY-----
+        
