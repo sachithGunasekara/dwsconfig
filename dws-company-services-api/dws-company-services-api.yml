@@ -25,6 +25,14 @@ spring:
       hibernate.format_sql : true
       hibernate.dialect : org.hibernate.dialect.MySQL5InnoDBDialect
       
+pwc:
+  authentication:
+    server: http://localhost:9001/auth/login
+  client:
+    application:
+      name: client
+      secret: clientpassword
+      
 security:
   oauth2:
     resource:
